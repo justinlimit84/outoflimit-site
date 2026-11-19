@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The 1990 AT&amp;T crash: how one line of code silenced America's phones — outoflimit</title>
+    <meta name="description" content="How one misplaced line of C code knocked out AT&amp;T's long-distance network for nine hours in January 1990, how engineers stopped it, and why the same pattern still takes systems down. Video, interactive cascade simulator, sources and full transcript." />
+    <link rel="canonical" href="https://www.outoflimit.com/videos/att-1990-crash/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#0d0e10" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:site_name" content="outoflimit" />
+    <meta property="og:title" content="The 1990 AT&amp;T Crash: How One Line of Code Silenced America's Phones" />
+    <meta property="og:description" content="Video, interactive cascade simulator, sources and full transcript." />
+    <meta property="og:url" content="https://www.outoflimit.com/videos/att-1990-crash/" />
+    <meta property="og:image" content="https://www.outoflimit.com/img/att-1990-crash.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "The 1990 AT&T Crash: How One Line of Code Silenced America's Phones",
+        "description": "How one misplaced line of code knocked out AT&T's long-distance network for nine hours in January 1990, how engineers stopped it, and why the same pattern still happens today.",
+        "thumbnailUrl": ["https://www.outoflimit.com/img/att-1990-crash.jpg"],
+        "uploadDate": "2026-11-24T02:00:00+05:30",
+        "duration": "PT8M51S",
+        "embedUrl": "https://www.youtube.com/embed/R91LGcZagQM",
+        "contentUrl": "https://www.youtube.com/watch?v=R91LGcZagQM",
+        "publisher": {"@type": "Organization", "name": "outoflimit", "url": "https://www.outoflimit.com/"}
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/att-Dp5fv6VQ.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/main-DhTph3Fy.js">
+    <link rel="stylesheet" crossorigin href="/assets/main-WIOEHL9g.css">
+  </head>
+  <body data-section="videos">
+    <a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="/" aria-label="outoflimit home">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M44.5 21.5A17 17 0 1 0 49 33" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+        <path d="M38 26 52 12M41 12h11v11" fill="none" stroke="var(--mint)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>outoflimit</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="/videos/" data-nav="videos">Videos</a>
+      <a href="/videos/morris-worm/#lab" data-nav="lab">Lab</a>
+      <a href="/about/" data-nav="about">About</a>
+      <a class="btn btn-sm btn-primary" href="https://www.youtube.com/@outoflimit-w5o?sub_confirmation=1" rel="noopener" target="_blank">Subscribe</a>
+    </nav>
+  </div>
+</header>
+
+    <main id="main">
+      <div class="wrap">
+        <header class="article-head" style="max-width:900px">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="/videos/">Videos</a> / Breaks</nav>
+          <h1 style="font-size:clamp(2rem,4.4vw,3.3rem)">The 1990 AT&amp;T Crash: How One Line of Code Silenced America's Phones</h1>
+          <div class="meta">
+            <span class="chip"><span class="dot"></span><span data-release="2026-11-23T20:30:00Z" data-before="Premieres Tue 24 Nov · 2:00 AM IST" data-after="24 Nov 2026">24 Nov 2026</span></span>
+            <span class="chip">8 min 51 s</span>
+            <span class="chip">Breaks</span>
+          </div>
+        </header>
+
+        <div class="player" data-yt="R91LGcZagQM" data-yt-release="2026-11-23T20:30:00Z"
+             data-soon-text="Premieres Tue 24 Nov · 2:00 AM IST — tap to subscribe and get notified"
+             data-title="The 1990 AT&amp;T Crash: How One Line of Code Silenced America's Phones">
+          <img src="/img/att-1990-crash.jpg" width="1280" height="720" alt="Video thumbnail: One line." />
+          <button class="play" type="button" aria-label="Play the video">
+            <span class="play-inner">
+              <span class="play-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+              <span class="note">Plays from YouTube when you press play</span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="narrow prose" style="padding-top:48px">
+        <p class="lead" style="font-size:1.2rem;color:var(--text)">On Monday, 15 January 1990, America's biggest long-distance phone network began knocking itself out, one switch at a time. For about nine hours, roughly half of the long-distance calls people tried to make simply failed. There was no fire, no storm and no attack: the network's own safety system spread the damage, triggered by one misplaced line of code.</p>
+
+        <h2 id="chapters">Chapters</h2>
+        <ol class="toc">
+          <li><a href="https://www.youtube.com/watch?v=R91LGcZagQM&amp;t=0s" target="_blank" rel="noopener"><time>0:00</time>One line of code, nine hours of failed calls</a></li>
+          <li><a href="https://www.youtube.com/watch?v=R91LGcZagQM&amp;t=39s" target="_blank" rel="noopener"><time>0:39</time>A network built never to fail</a></li>
+          <li><a href="https://www.youtube.com/watch?v=R91LGcZagQM&amp;t=86s" target="_blank" rel="noopener"><time>1:26</time>The update nobody noticed</a></li>
+          <li><a href="https://www.youtube.com/watch?v=R91LGcZagQM&amp;t=115s" target="_blank" rel="noopener"><time>1:55</time>The wave: 2:25 PM, 15 January 1990</a></li>
+          <li><a href="https://www.youtube.com/watch?v=R91LGcZagQM&amp;t=189s" target="_blank" rel="noopener"><time>3:09</time>The bug: one misplaced break</a></li>
+          <li><a href="https://www.youtube.com/watch?v=R91LGcZagQM&amp;t=262s" target="_blank" rel="noopener"><time>4:22</time>The first suspects</a></li>
+          <li><a href="https://www.youtube.com/watch?v=R91LGcZagQM&amp;t=297s" target="_blank" rel="noopener"><time>4:57</time>How engineers stopped it</a></li>
+          <li><a href="https://www.youtube.com/watch?v=R91LGcZagQM&amp;t=351s" target="_blank" rel="noopener"><time>5:51</time>The bug hunt</a></li>
+          <li><a href="https://www.youtube.com/watch?v=R91LGcZagQM&amp;t=433s" target="_blank" rel="noopener"><time>7:13</time>It still happens: CrowdStrike, Facebook, Microsoft</a></li>
+          <li><a href="https://www.youtube.com/watch?v=R91LGcZagQM&amp;t=492s" target="_blank" rel="noopener"><time>8:12</time>Three lessons from one line of code</a></li>
+        </ol>
+
+        <h2>The story in 60 seconds</h2>
+        <p>AT&amp;T's long-distance backbone was 114 computer switches, called 4ESS, that watched each other's health. If one went quiet, its neighbours routed calls around it. In December 1989, new software went into all 114 switches at once.</p>
+        <figure class="figure">
+          <img src="/img/att-wave.jpg" width="1280" height="720" alt="Animated map of the United States with switches turning red from east to west" loading="lazy" />
+          <figcaption>The wave from the video: within about ten minutes, switches across the country were resetting.</figcaption>
+        </figure>
+        <p>At about 2:25 PM on 15 January, a switch in New York City reset itself, as designed. When it came back, it sent its neighbours a quick burst of messages. A neighbour running the new code got a second message before it had finished with the first — and that is where the bug lived. It scrambled its own records, reset, came back, and sent its <em>own</em> burst. As AT&amp;T's Larry Seese put it a week later: "It was a chain reaction."</p>
+        <figure class="figure">
+          <img src="/img/att-break.jpg" width="1280" height="720" alt="Simplified C code with a highlighted break statement" loading="lazy" />
+          <figcaption>The bug, simplified as it was described in 1990: the programmer meant "skip this step", but in C, <code>break</code> leaves the whole block.</figcaption>
+        </figure>
+        <p>The cruel part: the bug only fired when two messages arrived close together — exactly what a recovering switch sends. The recovery itself was the trigger.</p>
+      </div>
+
+      <section id="lab" style="padding-top:56px">
+        <div class="wrap">
+          <div class="section-head" style="max-width:760px">
+            <span class="eyebrow">Interactive lab</span>
+            <h2>Try it: start the "I'm back" cascade</h2>
+            <p>Reset one switch and watch what its recovery messages do to the rest. Then change the software mix or make recovery "wait its turn", and run it again.</p>
+          </div>
+          <div class="lab" data-lab="cascade">
+            <div class="lab-top">
+              <span class="lab-title">Simulator · 50 switches</span>
+              <div class="lab-actions">
+                <button class="btn btn-sm btn-primary" data-action="start" type="button">Start</button>
+                <button class="btn btn-sm" data-action="reset" type="button">Reset</button>
+              </div>
+            </div>
+            <div class="lab-stage"><canvas aria-label="Simulation of telephone switches resetting in a chain reaction" role="img"></canvas></div>
+            <div class="lab-controls">
+              <div>
+                <span class="lab-label">Software on the switches</span>
+                <div class="seg" role="group" aria-label="Software">
+                  <button type="button" data-software="new" aria-pressed="true">All on the 1990 update</button>
+                  <button type="button" data-software="mixed" aria-pressed="false">¼ on older software</button>
+                  <button type="button" data-software="old" aria-pressed="false">All on older software</button>
+                </div>
+                <span class="lab-label" style="margin-top:14px">How a recovering switch announces itself</span>
+                <div class="seg" role="group" aria-label="Recovery">
+                  <button type="button" data-recovery="burst" aria-pressed="true">Quick burst (1990)</button>
+                  <button type="button" data-recovery="paced" aria-pressed="false">Wait its turn</button>
+                </div>
+                <p class="muted" data-caption style="margin:12px 0 0;font-size:0.95rem"></p>
+              </div>
+              <div>
+                <span class="lab-label">Live counts</span>
+                <div class="stats">
+                  <div class="stat"><b data-stat="down">0/50</b><span>switches resetting</span></div>
+                  <div class="stat"><b data-stat="resets">0</b><span>resets so far</span></div>
+                  <div class="stat"><b data-stat="calls">0%</b><span>calls failing now</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="muted" style="font-size:0.88rem;margin-top:12px;max-width:760px">A simplified teaching model: the network, timings and probabilities are illustrative. The real network had 114 switches, resets took four to six seconds, and the wave crossed the country in about ten minutes.</p>
+        </div>
+      </section>
+
+      <div class="narrow prose">
+        <h2>How engineers stopped it</h2>
+        <figure class="figure">
+          <img src="/img/att-closing-ramps.jpg" width="1280" height="720" alt="Map with the backup signalling links cut and the message count halved" loading="lazy" />
+          <figcaption>Cutting the backup signalling network roughly halved the flood of "I'm OK" messages.</figcaption>
+        </figure>
+        <p>Every switch that came back simply restarted the wave, and as more switches fell, the survivors got busier — making two messages landing close together even more likely. So the engineers did the opposite of pushing harder: they cut out the backup signalling network, the flood of messages roughly halved, and the switches began to stay up. The last switch cleared at half past eleven that night.</p>
+        <p>The first clue to the cause came from the switches that <em>didn't</em> fall: stations still running an older generation of the software kept working through the chaos. Pinning down the exact line took a couple of weeks, because the bug only appeared when two messages landed within about a hundredth of a second of each other.</p>
+
+        <h2>Three lessons from one line of code</h2>
+        <ol>
+          <li><strong>Try a change in one place before it goes everywhere</strong> — a "canary" rollout.</li>
+          <li><strong>If every machine runs identical code, they can all fail together.</strong></li>
+          <li><strong>Make recovery wait its turn</strong>, so coming back doesn't knock your neighbour over.</li>
+        </ol>
+        <p>The same shape keeps returning: CrowdStrike's faulty update in July 2024, Facebook's backbone outage in October 2021, and the Microsoft 365 outage in November 2026 all involved a safety or recovery system that ended up spreading the failure.</p>
+
+        <div class="callout">
+          <p><strong>Question for you:</strong> which outage have you lived through? Tell us in the comments on YouTube.</p>
+        </div>
+
+        <h2 id="explore">Explore further</h2>
+        <ul class="sources">
+          <li><strong>Bruce Sterling, <em>The Hacker Crackdown</em> (1992)</strong> — Part One opens with this very afternoon, and the book is free to read online (link in the sources below).</li>
+          <li><strong>RISKS Digest</strong> — the long-running forum where engineers discussed the crash as it happened; issues 9.61 and 9.62 are a window into 1990.</li>
+          <li><strong>A question to chase:</strong> modern systems add random "jitter" and exponential back-off when they retry. How do those ideas put lesson three into code?</li>
+        </ul>
+
+        <h2 id="sources">Sources</h2>
+        <ol class="sources">
+          <li><a href="https://catless.ncl.ac.uk/Risks/9.62.html" rel="noopener" target="_blank">Telephony, 22 Jan 1990, quoting AT&amp;T's Larry Seese (reprinted in RISKS Digest 9.62)</a><span class="why">The chain reaction, the message timing and the fix.</span></li>
+          <li><a href="https://catless.ncl.ac.uk/Risks/9.61.html" rel="noopener" target="_blank">RISKS Digest 9.61</a><span class="why">AT&amp;T: the problem was "traced to a single computer program".</span></li>
+          <li><a href="https://web.mit.edu/hacker/part1.html" rel="noopener" target="_blank">Bruce Sterling, The Hacker Crackdown (1992), Part One</a><span class="why">The afternoon of 15 January, the suspects and the aftermath.</span></li>
+          <li><a href="https://users.csc.calpoly.edu/~jdalbey/SWE/Papers/att_collapse" rel="noopener" target="_blank">Dennis Burke, "All Circuits are Busy Now" (Cal Poly, 1995)</a><span class="why">The bug as described in 1990 press.</span></li>
+          <li><a href="https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/" rel="noopener" target="_blank">Microsoft on the CrowdStrike outage (20 Jul 2024)</a><span class="why">About 8.5 million Windows devices affected.</span></li>
+          <li><a href="https://crowdstrike.com/wp-content/uploads/2024/08/Executive-Summary_Root-Cause-Analysis_Channel-File-291.pdf" rel="noopener" target="_blank">CrowdStrike root cause analysis (Aug 2024)</a><span class="why">Staged releases after the incident.</span></li>
+          <li><a href="https://engineering.fb.com/2021/10/05/networking-traffic/outage/" rel="noopener" target="_blank">Meta, "More details about the Oct. 4 Facebook outage"</a><span class="why">The capacity check that took the backbone down, and the staged restart.</span></li>
+          <li><a href="https://www.securityweek.com/microsoft-365-outage-disrupts-outlook-exchange-online-and-teams/" rel="noopener" target="_blank">Microsoft 365 outage, Nov 2026 (Microsoft's status updates, via SecurityWeek)</a><span class="why">Servers failing health checks overloading the rest.</span></li>
+        </ol>
+
+        <h2 id="transcript">Transcript</h2>
+        <details class="transcript">
+          <summary>Read the full narration</summary>
+          <div class="inner">
+            <h3>One line of code, nine hours of failed calls</h3>
+            <p>This is the 1990 AT&amp;T crash, and it was started by one line of code. On a Monday afternoon in January, America's biggest long-distance phone network began knocking itself out, one switch at a time. For about nine hours, roughly half of the long-distance calls people tried to make simply failed. There was no fire, no storm and no attack. The network had been built so that no single failure could take it down, and its own safety system is what spread the damage. In the next ten minutes: how one tiny mistake did this, how engineers stopped it, and why the same pattern still takes down the systems you use today.</p>
+            <h3>A network built never to fail</h3>
+            <p>In 1990, a call across the country ran through AT&amp;T's long-distance network. Its backbone was 114 giant computer switches, called 4ESS, spread across the United States. Each one could connect up to seven hundred thousand calls an hour. Alongside the calls ran a second, hidden network that the switches used to talk to each other about those calls. And the switches kept an eye on each other's health. If one got overloaded or went quiet, its neighbours noticed and quietly sent calls another way. Think of hikers on a mountain trail, calling "I'm OK" down the line: if one goes silent, the group simply routes around them. It was designed so that no one switch could ever bring the whole system down. And on most days, it worked perfectly.</p>
+            <h3>The update nobody noticed</h3>
+            <p>In December 1989, AT&amp;T engineers loaded new software into the switches. It was meant to make them handle certain messages faster. It had been through testing, and it went into all 114 switches. Imagine every referee in a league getting the same new rulebook on the same day: if there's a typo in it, it's in every match at once. Through the busy Christmas season, nothing went wrong. The mistake just sat there, waiting for one very specific moment.</p>
+            <h3>The wave: 2:25 PM, 15 January 1990</h3>
+            <p>That moment came at about 2:25 PM on Monday, 15 January 1990, which was Martin Luther King Day. A switch in New York City hit a problem with some of its equipment, and did exactly what it was designed to do: it reset itself. A reset like that takes about four to six seconds. While it was down, it told its neighbours: don't send me any calls. Then it came back, and started sending out its messages again, in a quick burst.</p>
+            <p>In another city, a neighbouring switch got the first message and began updating its notes: New York is back. Then a second message arrived, just a few thousandths of a second later, before it had finished with the first. That's where the bug lived: the second message scrambled the switch's own records, so it shut itself down and reset. A few seconds later it came back, and sent its own burst of messages to its neighbours. As AT&amp;T's Larry Seese put it a week later: "It was a chain reaction." It was a stadium wave nobody could stop: each section stands up only because the one beside it just did. Within about ten minutes, the wave had crossed the country. In Seese's words, "The event just repeated itself in every switch, over and over again."</p>
+            <h3>The bug: one misplaced break</h3>
+            <p>So what was the mistake? It was in code written in C. Here's a simplified version of it, as it was described in 1990. When a message arrives, the switch asks: was the sender out of service? If it was, and the switch isn't busy, it marks the sender as back in service. But if the switch is busy, the code says one word: break. The programmer meant: skip this step, and carry on with the message. But in C, that break means: leave this whole block of code, right now. So the program skipped the line that set everything up, and started writing over data it still needed. It's like a sat-nav telling you to exit one junction too early: every instruction after that is right, but you're on the wrong road.</p>
+            <p>The switch's own safety checks spotted the damage and did the sensible thing: shut down and start again. As AT&amp;T described it, the switch was effectively saying: "My CCS7 processor is insane." And here's the cruel part: the bug only fired when two messages arrived close together, which is exactly what a recovering switch sends. Seese again: "If the messages had been received farther apart, it would not have triggered the problem." The recovery itself was the trigger.</p>
+            <h3>The first suspects</h3>
+            <p>Now picture being in charge that afternoon. The nation's long-distance network is failing on a public holiday, and nobody yet knows why. Some in law enforcement and telephone security suspected hackers. Rumours of hidden viruses and logic bombs in the switches spread fast. It's like coming home to a flooded house and assuming a burglar, when it was a pipe you fitted yourself last month. Soon after, AT&amp;T said the problem was traced to a single computer program: its own. Still, that cloud of suspicion hung over the hacker raids that followed later that year.</p>
+            <h3>How engineers stopped it</h3>
+            <p>In AT&amp;T's network operations centre in New Jersey, a wall of screens was lit up red. Bell Labs engineers in New Jersey, Illinois and Ohio tried every standard remedy they had, and none of them worked. Every switch that came back simply started the wave all over again. And it was feeding itself: as more switches fell, the survivors got busier, which made two messages landing close together even more likely. So the engineers did the opposite of pushing harder: they cut out the backup signalling network entirely, and the flood of "I'm OK" messages roughly halved. Fewer messages meant fewer pairs arriving too close together, and the switches began to stay up. It's like a jammed motorway where you close the on-ramps: the cars already on the road clear, then you let the rest in slowly. At half past eleven that night, the last switch cleared. Tens of millions of calls had failed.</p>
+            <h3>The bug hunt</h3>
+            <p>But stopping the wave isn't the same as knowing what started it. Nobody that night could see the bug we just watched in slow motion. The first clue came from the switches that didn't fall. Some stations still ran an older generation of the software, and they kept working right through the chaos. Same calls, same day, same storm of messages: the difference was the new code. It's like a power cut where only the houses with the new wiring lose their lights: you know where to look.</p>
+            <p>Within nine hours, AT&amp;T's engineers more or less understood what had happened. By the next day, they were pulling the new software out of the switches and putting back an earlier version. But "more or less" isn't good enough when a whole country's phones are at stake. They had to make the crash happen again, on purpose, and catch the exact line in the act. That's hard, because this bug only appeared when two messages landed within about a hundredth of a second of each other. Replicating it exactly, and poring over the software line by line, took them a couple of weeks. Bugs that only show up with perfect timing are still some of the hardest that engineers ever hunt. Meanwhile, AT&amp;T's boss, Bob Allen, ran an apology in newspapers across the country: "We didn't live up to our own standards of quality, and we didn't live up to yours." And as a peace offering, AT&amp;T gave customers a discount on Valentine's Day.</p>
+            <h3>It still happens: CrowdStrike, Facebook, Microsoft</h3>
+            <p>36 years later, the code is different, but the pattern keeps coming back. July 2024: one faulty security update from CrowdStrike crashed about 8.5 million Windows computers, many of them running critical services. CrowdStrike now releases updates like that in stages. October 2021: a command meant only to check Facebook's network capacity took its whole backbone offline. And when engineers got it back, they brought traffic back in stages, because switching everything on at once could cause a new round of crashes. And this month, Microsoft 365 went down: servers that failed automated health checks dropped out, and their traffic overloaded the rest. Different bugs, same shape: a safety system built to route around failure ended up spreading it. That's why careful engineers use a canary: like miners who carried a bird into the mine, they send a change to one small group first and watch it before anyone else gets it.</p>
+            <h3>Three lessons from one line of code</h3>
+            <p>So, three lessons from one line of code. One: try a change in one place before it goes everywhere. Two: if every machine runs identical code, they can all fail together. Three: make recovery wait its turn, so coming back doesn't knock your neighbour over. Somewhere in the systems you rely on today, there's a line of code that just hasn't met its moment yet. Which outage have you lived through? Tell me in the comments.</p>
+          </div>
+        </details>
+      </div>
+
+      <section>
+        <div class="wrap">
+          <div class="cta-band">
+            <div>
+              <h2>Another story like this</h2>
+              <p>The Morris worm: how one student's experiment broke the internet in 1988 — with a one-in-seven simulator.</p>
+            </div>
+            <a class="btn btn-primary" href="/videos/morris-worm/">Open the story</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="/">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M44.5 21.5A17 17 0 1 0 49 33" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          <path d="M38 26 52 12M41 12h11v11" fill="none" stroke="var(--mint)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>outoflimit</span>
+      </a>
+      <p class="muted">How your tech really works, and where it breaks.</p>
+    </div>
+    <nav aria-label="Explore">
+      <h2 class="footer-h">Explore</h2>
+      <a href="/videos/">All videos</a>
+      <a href="/videos/morris-worm/#lab">Interactive lab</a>
+      <a href="/about/">About &amp; how we work</a>
+    </nav>
+    <nav aria-label="Follow">
+      <h2 class="footer-h">Follow</h2>
+      <a href="https://www.youtube.com/@outoflimit-w5o" rel="noopener" target="_blank">YouTube</a>
+      <a href="https://www.youtube.com/@outoflimit-w5o?sub_confirmation=1" rel="noopener" target="_blank">Subscribe</a>
+    </nav>
+    <nav aria-label="Legal">
+      <h2 class="footer-h">Legal</h2>
+      <a href="/legal/#privacy">Privacy</a>
+      <a href="/legal/#credits">Credits &amp; licences</a>
+      <a href="/legal/#copyright">Copyright</a>
+    </nav>
+  </div>
+  <div class="wrap footer-base">
+    <span>© <span data-year>2026</span> outoflimit. Original animations, scripts and code.</span>
+    <span class="muted">Not affiliated with any company or product named in our videos.</span>
+  </div>
+</footer>
+
+  </body>
+</html>
