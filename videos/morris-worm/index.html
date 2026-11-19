@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Morris Worm (1988): how one student's experiment broke the internet — outoflimit</title>
+    <meta name="description" content="How the 1988 Morris worm got in, the one-in-seven rule that buried machines in copies, the night Berkeley and MIT took it apart, and what changed. Video, interactive simulator, sources and full transcript." />
+    <link rel="canonical" href="https://www.outoflimit.com/videos/morris-worm/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#0d0e10" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:site_name" content="outoflimit" />
+    <meta property="og:title" content="The Morris Worm: How One Student's Experiment Broke the Internet in 1988" />
+    <meta property="og:description" content="Video, interactive one-in-seven simulator, sources and full transcript." />
+    <meta property="og:url" content="https://www.outoflimit.com/videos/morris-worm/" />
+    <meta property="og:image" content="https://www.outoflimit.com/img/morris-worm.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "The Morris Worm: How One Student's Experiment Broke the Internet in 1988",
+        "description": "How the 1988 Morris worm got in, the one-in-seven rule that buried machines in copies, the night Berkeley and MIT took it apart, and what changed afterwards.",
+        "thumbnailUrl": ["https://www.outoflimit.com/img/morris-worm.jpg"],
+        "uploadDate": "2026-11-21T02:00:00+05:30",
+        "duration": "PT6M20S",
+        "embedUrl": "https://www.youtube.com/embed/ow4ZqZUrxIQ",
+        "contentUrl": "https://www.youtube.com/watch?v=ow4ZqZUrxIQ",
+        "publisher": {"@type": "Organization", "name": "outoflimit", "url": "https://www.outoflimit.com/"}
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/morris-DQU3mD8a.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/main-DhTph3Fy.js">
+    <link rel="stylesheet" crossorigin href="/assets/main-WIOEHL9g.css">
+  </head>
+  <body data-section="videos">
+    <a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="/" aria-label="outoflimit home">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M44.5 21.5A17 17 0 1 0 49 33" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+        <path d="M38 26 52 12M41 12h11v11" fill="none" stroke="var(--mint)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>outoflimit</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="/videos/" data-nav="videos">Videos</a>
+      <a href="/videos/morris-worm/#lab" data-nav="lab">Lab</a>
+      <a href="/about/" data-nav="about">About</a>
+      <a class="btn btn-sm btn-primary" href="https://www.youtube.com/@outoflimit-w5o?sub_confirmation=1" rel="noopener" target="_blank">Subscribe</a>
+    </nav>
+  </div>
+</header>
+
+    <main id="main">
+      <div class="wrap">
+        <header class="article-head narrow" style="margin-inline:0;width:auto;max-width:900px">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="/videos/">Videos</a> / Breaks</nav>
+          <h1 style="font-size:clamp(2rem,4.4vw,3.3rem)">The Morris Worm: How One Student's Experiment Broke the Internet in 1988</h1>
+          <div class="meta">
+            <span class="chip"><span class="dot"></span><span data-release="2026-11-20T20:30:00Z" data-before="Premieres Fri 21 Nov · 2:00 AM IST" data-after="21 Nov 2026">21 Nov 2026</span></span>
+            <span class="chip">6 min 20 s</span>
+            <span class="chip">Breaks</span>
+          </div>
+        </header>
+
+        <div class="player" data-yt="ow4ZqZUrxIQ" data-yt-release="2026-11-20T20:30:00Z"
+             data-soon-text="Premieres Fri 21 Nov · 2:00 AM IST — tap to subscribe and get notified"
+             data-title="The Morris Worm: How One Student's Experiment Broke the Internet in 1988">
+          <img src="/img/morris-worm.jpg" width="1280" height="720" alt="Video thumbnail: It was an experiment" />
+          <button class="play" type="button" aria-label="Play the video">
+            <span class="play-inner">
+              <span class="play-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+              <span class="note">Plays from YouTube when you press play</span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="narrow prose" style="padding-top:48px">
+        <p class="lead" style="font-size:1.2rem;color:var(--text)">On the evening of 2 November 1988, a graduate student started a small program on a computer at MIT. By the next morning, thousands of the internet's computers had slowed to a crawl — and nothing had been stolen. This is how it got in, the one number that turned an experiment into a disaster, and the fixes that still protect the device you're reading this on.</p>
+
+        <h2 id="chapters">Chapters</h2>
+        <ol class="toc">
+          <li><a href="https://www.youtube.com/watch?v=ow4ZqZUrxIQ&amp;t=0s" target="_blank" rel="noopener"><time>0:00</time>The night the internet slowed down</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ow4ZqZUrxIQ&amp;t=37s" target="_blank" rel="noopener"><time>0:37</time>What a worm is</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ow4ZqZUrxIQ&amp;t=84s" target="_blank" rel="noopener"><time>1:24</time>Four ways in</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ow4ZqZUrxIQ&amp;t=161s" target="_blank" rel="noopener"><time>2:41</time>One number: the 1-in-7 rule</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ow4ZqZUrxIQ&amp;t=223s" target="_blank" rel="noopener"><time>3:43</time>The longest night</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ow4ZqZUrxIQ&amp;t=274s" target="_blank" rel="noopener"><time>4:34</time>The fixes that became the rules</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ow4ZqZUrxIQ&amp;t=343s" target="_blank" rel="noopener"><time>5:43</time>What happened to Robert Morris</a></li>
+        </ol>
+
+        <h2>The story in 60 seconds</h2>
+        <p>In 1988 the internet was small — about sixty thousand computers, mostly at universities, labs and the military — and many systems simply trusted each other. Unlike a virus, which needs you to carry it, a <strong>worm</strong> travels by itself from one computer to the next.</p>
+        <p>The Morris worm had four ways in: a debug back door left switched on in the <em>sendmail</em> mail program; a <strong>buffer overflow</strong> in the <em>finger</em> service, which read a question into a 512-character box without checking its length; trusted machines that let each other log in with no password; and a list of 432 common passwords.</p>
+        <figure class="figure">
+          <img src="/img/morris-worm-one-in-seven.jpg" width="1280" height="720" alt="Animation: a bouncer lets every seventh person into a full club" loading="lazy" />
+          <figcaption>The bouncer analogy from the video: "if the club is full, turn people away — but let every seventh person in no matter what."</figcaption>
+        </figure>
+        <p>To avoid piling up on one machine, each new copy first asked whether a worm was already running. But Morris feared administrators would fake that answer, so one time in seven the copy <strong>stayed anyway</strong>. Across a whole network of copies knocking again and again, that careful-sounding rule became a flood: copies piled up until machines had no time left for real work.</p>
+      </div>
+
+      <section id="lab" style="padding-top:56px">
+        <div class="wrap">
+          <div class="section-head" style="max-width:760px">
+            <span class="eyebrow">Interactive lab</span>
+            <h2>Try it: the one-in-seven rule</h2>
+            <p>Each worm copy keeps knocking on neighbouring machines. A clean machine gets infected; an infected one says "a worm is already here", and the new copy quits — unless the rule tells it to stay. Pick a rule and watch the copies.</p>
+          </div>
+          <div class="lab" data-lab="one-in-seven">
+            <div class="lab-top">
+              <span class="lab-title">Simulator · 32 machines</span>
+              <div class="lab-actions">
+                <button class="btn btn-sm btn-primary" data-action="run" type="button">Run</button>
+                <button class="btn btn-sm" data-action="reset" type="button">Reset</button>
+              </div>
+            </div>
+            <div class="lab-stage"><canvas aria-label="Simulation of worm copies spreading across a network of computers" role="img"></canvas></div>
+            <div class="lab-controls">
+              <div>
+                <span class="lab-label">When a machine already has a worm, the new copy stays…</span>
+                <div class="seg" role="group" aria-label="Rule">
+                  <button type="button" data-rule="0" aria-pressed="false">Never</button>
+                  <button type="button" data-rule="7" aria-pressed="true">1 in 7 (real rule)</button>
+                  <button type="button" data-rule="2" aria-pressed="false">1 in 2</button>
+                  <button type="button" data-rule="1" aria-pressed="false">Always</button>
+                </div>
+                <p class="muted" data-caption style="margin:12px 0 0;font-size:0.95rem"></p>
+              </div>
+              <div>
+                <span class="lab-label">Live counts</span>
+                <div class="stats">
+                  <div class="stat"><b data-stat="infected">1/32</b><span>machines infected</span></div>
+                  <div class="stat"><b data-stat="copies">1</b><span>worm copies</span></div>
+                  <div class="stat"><b data-stat="overloaded">0</b><span>overloaded (12+)</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="muted" style="font-size:0.88rem;margin-top:12px;max-width:760px">A simplified teaching model: the network, timings and the "overloaded" threshold are made up to show the effect, not to reconstruct 1988 exactly.</p>
+        </div>
+      </section>
+
+      <div class="narrow prose">
+        <h2>What changed afterwards</h2>
+        <figure class="figure">
+          <img src="/img/morris-worm-what-changed.jpg" width="1280" height="720" alt="Three cards: a fire station, a code symbol and a gavel" loading="lazy" />
+          <figcaption>Three lasting changes: a team to call, safer code, and a new law.</figcaption>
+        </figure>
+        <p><strong>A team to call.</strong> Weeks later, the US defence research agency asked Carnegie Mellon University to set up the first computer emergency response team, CERT. Today there are hundreds of such teams worldwide.</p>
+        <p><strong>Safer code.</strong> Software makers started checking how much data comes in before storing it, and the C function behind the finger overflow, <code>gets()</code>, was eventually removed from the language (C11, 2011).</p>
+        <p><strong>A new law.</strong> In 1990, Morris became the first person convicted under the US Computer Fraud and Abuse Act. He later became a professor of computer science at MIT and co-founded Y Combinator.</p>
+
+        <div class="callout">
+          <p><strong>Question for you:</strong> would the internet be safer today if he had never pressed enter? Tell us in the comments on YouTube.</p>
+        </div>
+
+        <h2 id="explore">Explore further</h2>
+        <ul class="sources">
+          <li><strong>Eugene Spafford</strong> — his line-by-line analysis, written within weeks of the attack, is still the clearest account of how the worm worked (first source below).</li>
+          <li><strong>Mark Eichin &amp; Jon Rochlis</strong> — "With Microscope and Tweezers" (1989), the MIT team's own story of taking the worm apart overnight.</li>
+          <li><strong>A question to chase:</strong> buffer overflows are 35+ years old. Why do memory-safe languages like Rust matter so much for the same bug class today?</li>
+        </ul>
+
+        <h2 id="sources">Sources</h2>
+        <ol class="sources">
+          <li><a href="https://spaf.cerias.purdue.edu/tech-reps/823.pdf" rel="noopener" target="_blank">E. H. Spafford, "The Internet Worm Program: An Analysis", Purdue CSD-TR-823 (1988)</a><span class="why">How the worm entered machines and the "already infected?" check.</span></li>
+          <li><a href="https://www.gao.gov/products/imtec-89-57" rel="noopener" target="_blank">US GAO, "Computer Security: Virus Highlights Need for Improved Internet Management", IMTEC-89-57 (1989)</a><span class="why">Size of the internet in 1988 and the scale of the impact.</span></li>
+          <li><a href="https://www.sei.cmu.edu/history-of-innovation/fostering-growth-in-professional-cyber-incident-management/" rel="noopener" target="_blank">Software Engineering Institute, Carnegie Mellon — the founding of CERT</a><span class="why">The first computer emergency response team.</span></li>
+          <li>United States v. Morris, 928 F.2d 504 (2d Cir. 1991)<span class="why">The conviction under the Computer Fraud and Abuse Act.</span></li>
+          <li><a href="https://www.first.org/members/teams/" rel="noopener" target="_blank">FIRST — incident response team members</a><span class="why">Hundreds of response teams worldwide today.</span></li>
+          <li><a href="https://en.cppreference.com/w/c/io/gets" rel="noopener" target="_blank">cppreference — gets() removed in C11</a><span class="why">The unsafe function removed from the C language.</span></li>
+          <li><a href="https://www.ycombinator.com/people" rel="noopener" target="_blank">Y Combinator — founders</a><span class="why">Robert Morris as a co-founder.</span></li>
+        </ol>
+
+        <h2 id="transcript">Transcript</h2>
+        <details class="transcript">
+          <summary>Read the full narration</summary>
+          <div class="inner">
+            <h3>The night the internet slowed down</h3>
+            <p>On the evening of November 2nd, 1988, a graduate student started a small program on a computer at MIT. It was called the Morris worm, and it was supposed to spread quietly, from machine to machine, without anyone noticing. By the next morning, thousands of the internet's computers had slowed to a crawl. Labs pulled their own network cables out of the wall, just to make it stop. Nobody had broken into anything on purpose, and nothing was stolen. One small number in the code turned a quiet experiment into the internet's first big disaster. And the way the world fixed it still protects the device you're watching this on.</p>
+            <h3>What a worm is</h3>
+            <p>In 1988 the internet was small: about sixty thousand computers, mostly at universities, labs and the military. People knew each other. Many systems trusted each other, and security was mostly politeness.</p>
+            <p>A computer virus is like a hitchhiker: it needs you to carry it, inside a file or a disk you share. A worm doesn't wait for a ride. It drives itself, from one computer straight to the next, over the network. Every copy looks for new computers to jump to, and every new computer makes more copies. Morris wrote his worm to do exactly that, on the two kinds of machines that ran much of the early internet: Sun 3 and VAX computers running Unix.</p>
+            <h3>Four ways in</h3>
+            <p>But to jump into a computer, a worm needs a way in. His had four.</p>
+            <p>The first door was the mail program, called sendmail. It had a debug mode left switched on, a back door for programmers, and the worm used it to slip its own commands in with a message.</p>
+            <p>The second door was a tiny service called finger, which told you who was logged in on another computer. It read your question into a box of 512 characters, and never checked whether you sent more. Imagine a paper form where, if you write past the end of the box, your words spill onto the instructions printed underneath. The worm sent a question that was too long on purpose, and the extra text replaced the instructions with its own. That trick is called a buffer overflow, and it was the first time most people had ever heard of one.</p>
+            <p>The third door was trust: some computers let friends from listed machines log in with no password at all. Break into one, and every computer that trusted it opened up too.</p>
+            <p>And the fourth door was guessing passwords. The worm tried the obvious ones first, like the user's own name, and then a built-in list of 432 common words. Think of a burglar with a ring of the 432 keys people use most. He doesn't need to pick your lock, just to try your key. Four doors, any one of them enough. So the worm got in almost everywhere it knocked.</p>
+            <h3>One number: the 1-in-7 rule</h3>
+            <p>Here's the part that turned an experiment into a disaster. Morris didn't want his worm to pile up on one machine, so every new copy first asked: is a worm already running here? If the answer was yes, the new copy was supposed to quit. But he worried that administrators would fake that answer, to keep the worm out. So he added a rule: one time in seven, ignore the answer and stay anyway.</p>
+            <p>Picture a bouncer at a club who's told: if the club is full, turn people away, but let every seventh person in no matter what. With a short queue, that's harmless. But the worm was knocking on every computer again and again, thousands of times. One in seven of all those knocks got in, and copies piled up inside each machine. Each copy ate memory and processor time, until there was nothing left for real work. Machines slowed to a crawl, and some crashed outright. One in seven sounds careful. Multiplied by an entire network, it was a flood.</p>
+            <h3>The longest night</h3>
+            <p>By late evening, system managers across the country noticed their machines grinding to a halt. Kill the worm, reboot, and within minutes it was back, because a neighbour was still infected. Some sites simply cut themselves off from the network, which also cut them off from the warnings and fixes. At Berkeley and at MIT, teams worked through the night, taking the worm apart line by line. By about five in the morning, Berkeley had posted a fix for the mail program, and more fixes followed through the day. Within about two days, the worm was gone from most computers. Nobody ever counted exactly how many machines it hit; the estimates run into the thousands, out of about sixty thousand. The worm deleted nothing and stole nothing. But it showed, in one night, that a single program could stall the whole internet.</p>
+            <h3>The fixes that became the rules</h3>
+            <p>What happened next is why this story still matters. First, there had been nobody to call. Warnings spread by email, through the same network the worm was choking. So, weeks later, the US defence research agency asked Carnegie Mellon University to set up the first computer emergency response team, called CERT. It's like a town that only builds a fire station after the big fire: a place to call, people who know what to do, and warnings sent before it spreads. Today there are hundreds of these teams around the world, and the security warnings your phone and laptop receive come out of that idea.</p>
+            <p>Second, the bugs themselves. Software makers started checking how much data comes in before storing it. The function that let the worm overflow the finger box, called gets, was eventually removed from the C language itself.</p>
+            <p>And third, the law. In 1990, Morris became the first person convicted under the new US computer fraud law. He got probation, community service and a fine, not prison. From then on, releasing a program that spreads across other people's computers wasn't an experiment. It was a crime.</p>
+            <h3>What happened to Robert Morris</h3>
+            <p>As for the student who accidentally stalled the internet? Robert Morris went on to become a professor of computer science at MIT. And he co-founded Y Combinator, the startup program behind companies like Airbnb and Dropbox. The person behind the internet's first big disaster ended up helping to build some of its biggest successes. So here's my question: would the internet be safer today if he had never pressed enter?</p>
+          </div>
+        </details>
+      </div>
+
+      <section>
+        <div class="wrap">
+          <div class="cta-band">
+            <div>
+              <h2>Next story: the 1990 AT&amp;T crash</h2>
+              <p>How one line of code silenced America's phones for nine hours. <span data-release="2026-11-23T20:30:00Z" data-before="Premieres Tue 24 Nov." data-after="Out now."></span></p>
+            </div>
+            <a class="btn btn-primary" href="https://www.youtube.com/@outoflimit-w5o?sub_confirmation=1" rel="noopener" target="_blank">Subscribe to get it</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="/">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M44.5 21.5A17 17 0 1 0 49 33" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          <path d="M38 26 52 12M41 12h11v11" fill="none" stroke="var(--mint)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>outoflimit</span>
+      </a>
+      <p class="muted">How your tech really works, and where it breaks.</p>
+    </div>
+    <nav aria-label="Explore">
+      <h2 class="footer-h">Explore</h2>
+      <a href="/videos/">All videos</a>
+      <a href="/videos/morris-worm/#lab">Interactive lab</a>
+      <a href="/about/">About &amp; how we work</a>
+    </nav>
+    <nav aria-label="Follow">
+      <h2 class="footer-h">Follow</h2>
+      <a href="https://www.youtube.com/@outoflimit-w5o" rel="noopener" target="_blank">YouTube</a>
+      <a href="https://www.youtube.com/@outoflimit-w5o?sub_confirmation=1" rel="noopener" target="_blank">Subscribe</a>
+    </nav>
+    <nav aria-label="Legal">
+      <h2 class="footer-h">Legal</h2>
+      <a href="/legal/#privacy">Privacy</a>
+      <a href="/legal/#credits">Credits &amp; licences</a>
+      <a href="/legal/#copyright">Copyright</a>
+    </nav>
+  </div>
+  <div class="wrap footer-base">
+    <span>© <span data-year>2026</span> outoflimit. Original animations, scripts and code.</span>
+    <span class="muted">Not affiliated with any company or product named in our videos.</span>
+  </div>
+</footer>
+
+  </body>
+</html>
