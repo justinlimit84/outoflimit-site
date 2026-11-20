@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amdahl's Law explained: why a million CPUs can still be only 20x faster — outoflimit</title>
+    <meta name="description" content="Amdahl's Law and Gustafson's Law explained with worked examples: why 5% serial work caps a program at 20x, how Sandia got 1,016–1,021x on 1,024 processors in 1988, strong vs weak scaling, and why AI uses thousands of GPUs. Interactive speed-up calculator, sources and full transcript." />
+    <link rel="canonical" href="https://www.outoflimit.com/videos/amdahl-gustafson/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#0d0e10" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:site_name" content="outoflimit" />
+    <meta property="og:title" content="Amdahl's Law: Why a Million CPUs Can Still Be Only 20x Faster" />
+    <meta property="og:description" content="Interactive speed-up calculator for Amdahl's and Gustafson's laws, with worked examples, sources and the full transcript." />
+    <meta property="og:url" content="https://www.outoflimit.com/videos/amdahl-gustafson/" />
+    <meta property="og:image" content="https://www.outoflimit.com/img/amdahl-gustafson.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- VideoObject JSON-LD goes here once the video is uploaded (needs its YouTube ID) -->
+    <script type="module" crossorigin src="/assets/amdahl-BdxK5ikk.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/main-CP2kSuSw.js">
+    <link rel="stylesheet" crossorigin href="/assets/main-CrU2tUvH.css">
+  </head>
+  <body data-section="videos">
+    <a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="/" aria-label="outoflimit home">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M44.5 21.5A17 17 0 1 0 49 33" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+        <path d="M38 26 52 12M41 12h11v11" fill="none" stroke="var(--mint)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>outoflimit</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="/videos/" data-nav="videos">Videos</a>
+      <a href="/videos/morris-worm/#lab" data-nav="lab">Lab</a>
+      <a href="/about/" data-nav="about">About</a>
+      <a class="btn btn-sm btn-primary" href="https://www.youtube.com/@outoflimit-w5o?sub_confirmation=1" rel="noopener" target="_blank">Subscribe</a>
+    </nav>
+  </div>
+</header>
+
+    <main id="main">
+      <div class="wrap">
+        <header class="article-head" style="max-width:900px">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="/videos/">Videos</a> / Limits</nav>
+          <h1 style="font-size:clamp(2rem,4.4vw,3.3rem)">Amdahl's Law: Why a Million CPUs Can Still Be Only 20x Faster</h1>
+          <div class="meta">
+            <span class="chip"><span class="dot"></span><span data-release="2026-11-30T20:30:00Z" data-before="Premieres Tue 1 Dec · 2:00 AM IST" data-after="1 Dec 2026">1 Dec 2026</span></span>
+            <span class="chip">9 min 6 s</span>
+            <span class="chip">Limits</span>
+          </div>
+        </header>
+
+        <div class="player" data-yt="VIDEO_ID" data-yt-release="2026-11-30T20:30:00Z"
+             data-soon-text="Premieres Tue 1 Dec · 2:00 AM IST — tap to subscribe and get notified"
+             data-title="Amdahl's Law: Why a Million CPUs Can Still Be Only 20x Faster">
+          <img src="/img/amdahl-gustafson.jpg" width="1280" height="720" alt="Video thumbnail: 20x max? A speed-up curve flattening at 20 while processors go to a million" />
+          <button class="play" type="button" aria-label="Play the video">
+            <span class="play-inner">
+              <span class="play-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+              <span class="note">Plays from YouTube when you press play</span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="narrow prose" style="padding-top:48px">
+        <p class="lead" style="font-size:1.2rem;color:var(--text)">Give a program a million processors and it can still be only twenty times faster. In 1967, Gene Amdahl explained why. In 1988, a team at Sandia National Laboratories got more than a thousand times faster on 1,024 processors anyway. Both were right, and the reason decides how today's AI gets trained.</p>
+
+        <h2 id="chapters">Chapters</h2>
+        <ol class="toc" data-release="2026-11-30T20:30:00Z" data-soon-text="Chapter links open on YouTube from Tue 1 Dec, 2:00 AM IST, when the video goes live.">
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=0s" target="_blank" rel="noopener"><time>0:00</time>The million-processor question</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=32s" target="_blank" rel="noopener"><time>0:32</time>The part that won't split</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=103s" target="_blank" rel="noopener"><time>1:43</time>Amdahl's argument (1967)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=203s" target="_blank" rel="noopener"><time>3:23</time>"Don't bother?"</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=229s" target="_blank" rel="noopener"><time>3:49</time>The impossible result (1988)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=267s" target="_blank" rel="noopener"><time>4:27</time>Gustafson: change the question</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=367s" target="_blank" rel="noopener"><time>6:07</time>Strong vs weak scaling</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=419s" target="_blank" rel="noopener"><time>6:59</time>2005: the clock stops</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=459s" target="_blank" rel="noopener"><time>7:39</time>AI and the slow part</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=516s" target="_blank" rel="noopener"><time>8:36</time>The challenge</a></li>
+        </ol>
+
+        <h2>The idea in 60 seconds</h2>
+        <p>Every program has two kinds of work: a part that can be split across many processors, and a <strong>serial part</strong> that has to happen in order — reading a file, waiting on the network, taking turns on shared data, adding up the final answer. Extra processors only speed up the first kind.</p>
+        <figure class="figure">
+          <img src="/img/ag-formula.jpg" width="1280" height="720" alt="The formula Speed-up = 1 ÷ ((1 − p) + p ÷ N) with a time bar above it" loading="lazy" />
+          <figcaption>Amdahl's Law, with p the parallel fraction and N the number of processors. Amdahl argued it in words in 1967; others wrote the formula down later.</figcaption>
+        </figure>
+        <p><strong>Worked example:</strong> if 95% of a program can run in parallel (5% serial) on 8 processors, the speed-up is 1 ÷ (0.05 + 0.95 ÷ 8) = 1 ÷ 0.16875 ≈ <strong>5.93×</strong>, not 8×. On a million processors it's 19.9996×: one divided by 5% is 20, and you can never pass it.</p>
+        <figure class="figure">
+          <img src="/img/ag-ceiling.jpg" width="1280" height="720" alt="Speed-up curve flattening on a dashed line at 20x as processors go from 1 to 1,000,000" loading="lazy" />
+          <figcaption>With 5% serial work, the speed-up flattens at 20× however many processors you add.</figcaption>
+        </figure>
+        <p>In 1988, John Gustafson and his Sandia colleagues measured speed-ups of <strong>1,021×, 1,020× and 1,016×</strong> on a 1,024-processor machine, where Amdahl's formula predicted about 111–201×. The catch: they didn't run the same job faster — they ran a bigger job in the same time. Counted that way, the <strong>scaled speed-up</strong> is (1 − p) + p × N, a formula Gustafson credited to his colleague Barsis.</p>
+        <figure class="figure">
+          <img src="/img/ag-sandia.jpg" width="1280" height="720" alt="Three result cards, 1,021x, 1,020x and 1,016x, under a 1,024-processor lattice" loading="lazy" />
+          <figcaption>Sandia's 1988 results on three real engineering programs, against Amdahl's prediction.</figcaption>
+        </figure>
+      </div>
+
+      <section id="lab" style="padding-top:56px">
+        <div class="wrap">
+          <div class="section-head" style="max-width:760px">
+            <span class="eyebrow">Interactive lab</span>
+            <h2>Speed-up calculator</h2>
+            <p>Set the serial part and the number of processors. Orange is Amdahl (the same job, made faster); mint is Gustafson–Barsis (a bigger job in the same time). The dashed grey line is perfect scaling.</p>
+          </div>
+          <div class="lab" data-lab="speedup">
+            <div class="lab-top">
+              <span class="lab-title">Amdahl vs Gustafson</span>
+              <div class="seg" role="group" aria-label="Examples">
+                <button type="button" data-preset="0.05,8">Video example</button>
+                <button type="button" data-preset="0.004,1024">Sandia 1988</button>
+                <button type="button" data-preset="0.05,64">Exam question</button>
+              </div>
+            </div>
+            <div class="lab-stage"><canvas aria-label="Log-log graph of speed-up against number of processors for Amdahl's and Gustafson's laws" role="img"></canvas></div>
+            <div class="lab-controls">
+              <div>
+                <label class="lab-label" for="sp-serial">Serial part: <b data-out="serial">5.0%</b></label>
+                <input id="sp-serial" class="range" type="range" min="0" max="50" step="any" value="5" data-input="serial" />
+                <label class="lab-label" for="sp-n" style="margin-top:12px">Processors: <b data-out="n">8</b></label>
+                <input id="sp-n" class="range" type="range" min="0" max="6" step="any" value="0.903089987" data-input="n" />
+                <pre class="steps" data-out="steps"></pre>
+              </div>
+              <div>
+                <span class="lab-label">Results</span>
+                <div class="stats">
+                  <div class="stat"><b data-out="amdahl" style="color:var(--orange)">5.93×</b><span>Amdahl (same job)</span></div>
+                  <div class="stat"><b data-out="gustafson" style="color:var(--mint)">7.65×</b><span>Gustafson (bigger job)</span></div>
+                  <div class="stat"><b data-out="limit">20×</b><span>Amdahl's ceiling</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="muted" style="font-size:0.88rem;margin-top:12px;max-width:760px">Both formulas are exactly as in the video, and the calculator is tested against every number the video quotes. Real programs also lose time to communication and waiting, so they usually land below these lines.</p>
+        </div>
+      </section>
+
+      <div class="narrow prose">
+        <h2>Strong vs weak scaling</h2>
+        <figure class="figure">
+          <img src="/img/ag-both-laws.jpg" width="1280" height="720" alt="Gustafson's line rising to 950x while Amdahl's curve stays near 20x, for 1 to 1,000 processors" loading="lazy" />
+          <figcaption>Same 5% serial part, two questions: Amdahl stays near 20×, Gustafson reaches 950× at 1,000 processors.</figcaption>
+        </figure>
+        <p><strong>Strong scaling</strong> keeps the job a fixed size and asks how much faster more processors finish it — Amdahl's Law sets its limit. <strong>Weak scaling</strong> grows the job with the processors so each one keeps the same amount of work — that's Gustafson's territory. Loading one web page faster is a strong-scaling problem; fitting a bigger, more detailed simulation into the same hour is a weak-scaling one.</p>
+        <p><strong>Exam-style example:</strong> 5% serial, 64 processors. Amdahl: 1 ÷ (0.05 + 0.95 ÷ 64) ≈ <strong>15.4×</strong>. Gustafson: 0.05 + 0.95 × 64 = <strong>60.85×</strong>. Same program, same machine — two different questions.</p>
+
+        <h2>Why it matters for AI</h2>
+        <figure class="figure">
+          <img src="/img/ag-straggler.jpg" width="1280" height="720" alt="A wall of GPU chips with one orange straggler and the quote: Even a single straggler can slow down thousands of other GPUs" loading="lazy" />
+          <figcaption>Meta trained Llama 3 405B on up to 16,000 GPUs — and one slow chip can still hold them all up.</figcaption>
+        </figure>
+        <p>After single-core clock speeds flattened around 2003 and chips went multicore, the big speed gains came from using many cores at once. AI training scales because it's a weak-scaling problem: bigger models and more data grow to fill the machine. But every so often all the GPUs must stop and agree on what they've learned, and that step is serial. Meta's engineers wrote that even a single straggler can slow down thousands of other GPUs, and over one 54-day stretch they counted 466 interruptions.</p>
+
+        <div class="callout">
+          <p><strong>Challenge:</strong> next time a game or a big app loads, open your task manager and find the one core doing all the work while the others wait. That's Amdahl's serial part, live on your screen.</p>
+        </div>
+
+        <h2 id="explore">Explore further</h2>
+        <ul class="sources">
+          <li><strong>Read the originals.</strong> Amdahl's paper is only three pages, and Gustafson's reply is just as short — both are linked below and readable in ten minutes.</li>
+          <li><strong>Herb Sutter, "The Free Lunch Is Over" (2005)</strong> — the essay that told programmers the multicore era had arrived.</li>
+          <li><strong>A question to chase:</strong> what else counts as a "serial part" in a modern data centre — the network, the slowest machine, the time to save a checkpoint? How do engineers shrink each one?</li>
+        </ul>
+
+        <h2 id="sources">Sources</h2>
+        <ol class="sources">
+          <li><a href="https://web.archive.org/web/20191029093307/http://www-inst.eecs.berkeley.edu/~n252/paper/Amdahl.pdf" rel="noopener" target="_blank">G. M. Amdahl, "Validity of the single processor approach to achieving large scale computing capabilities", AFIPS Spring Joint Computer Conference, April 1967</a><span class="why">The 40% housekeeping figure, the "five to seven times" cap, and his conclusion. The formula is not in the paper.</span></li>
+          <li><a href="https://web.archive.org/web/20201111200408/http://www.johngustafson.net/pubs/pub13/amdahl.htm" rel="noopener" target="_blank">J. L. Gustafson, "Reevaluating Amdahl's Law", Communications of the ACM, May 1988</a><span class="why">Sandia's 1,024-processor results (1,021×, 1,020×, 1,016×), the scaled speed-up credited to Barsis, and the "considerable skepticism".</span></li>
+          <li><a href="http://www.gotw.ca/publications/concurrency-ddj.htm" rel="noopener" target="_blank">H. Sutter, "The Free Lunch Is Over", Dr. Dobb's Journal, March 2005</a><span class="why">Clock speeds flattening around 2003, Intel dropping its 4 GHz plans, the turn to multicore.</span></li>
+          <li><a href="https://arxiv.org/abs/2407.21783" rel="noopener" target="_blank">Llama Team, AI @ Meta, "The Llama 3 Herd of Models", 2024</a><span class="why">Up to 16K H100 GPUs, 466 interruptions in 54 days, and the straggler quote (section 3.3).</span></li>
+        </ol>
+
+        <h2 id="transcript">Transcript</h2>
+        <details class="transcript">
+          <summary>Read the full narration</summary>
+          <div class="inner">
+            <h3>The million-processor question</h3>
+            <p>What if you gave your program a million processors? A million times faster, right? In 1967, a computer architect at IBM explained why it might stop at just twenty times faster, and it became known as Amdahl&#x27;s Law. Twenty years later, a team at Sandia National Laboratories made programs run more than a thousand times faster, on about a thousand processors. Both of them were right. By the end of this video, you&#x27;ll see exactly how, and why the same idea decides how AI gets trained today.</p>
+            <h3>The part that won&#x27;t split</h3>
+            <p>Your laptop or phone probably has eight cores, or more. But open a task manager while something big loads, and you&#x27;ll often see one core working hard while the others sit almost idle. That&#x27;s because every program has two kinds of work. Some work can be split up and done at the same time, like processing every pixel of a photo. And some work has to happen in order, one step after another, like reading the file before you can process it. Think of a group project: five classmates can write their sections at the same time. But one person still has to stitch everything into the final report, and nobody can help with that bit. Add twenty more classmates, and the writing gets faster, but the stitching takes just as long as before. That stubborn, in-order part is called the serial part, and it&#x27;s the whole story of this video. Serial parts hide in places you&#x27;d never notice. Reading a file from the disk before anything can start. Waiting for an answer from the network. Taking turns to update one shared piece of data, so two cores don&#x27;t overwrite each other. And at the very end, adding up everyone&#x27;s results into one final answer. Each of those is a moment where extra cores just have to wait.</p>
+            <h3>Amdahl&#x27;s argument (1967)</h3>
+            <p>In April 1967, at a computer conference in Atlantic City, Gene Amdahl presented a short paper, just a few pages long. For over a decade, some had argued that single computers had hit their limits, and the future was to wire many of them together. Amdahl looked at real programs and found that a big share of their work was housekeeping: moving and managing data, step by step. In his numbers, that kind of overhead alone would cap a machine at about five to seven times faster, however many processors you added. His conclusion was blunt: speeding up the parallel part is wasted effort unless you speed up the serial part almost as much. Here&#x27;s the surprising bit: the famous formula that carries his name isn&#x27;t actually in his paper. Amdahl made the argument in words, and others wrote it down as an equation later. Call the parallel fraction of the work p, and the number of processors N. The serial part still takes the same time, but the parallel part shrinks by N. Amdahl&#x27;s Law says your speed-up is one, divided by the serial part plus the parallel part shared out across N. Let&#x27;s try it. Say ninety-five percent of a program can run in parallel, and you have eight processors. Five percent stays serial, and ninety-five percent is shared across eight. That gives a speed-up of about five point nine, not eight. Now give it a million processors. The parallel part almost vanishes, but that five percent never moves. So the speed-up gets stuck just below twenty times, because one divided by five percent is twenty. No matter how much hardware you buy, the serial part sets the speed limit.</p>
+            <h3>&quot;Don&#x27;t bother?&quot;</h3>
+            <p>For years, that curve looked like a death sentence for giant parallel machines. If even a tiny serial part caps you so hard, why build a thousand processors? Even in 1988, one researcher described considerable skepticism about massive parallelism, and Amdahl&#x27;s Law was the reason. With a thousand processors, even one percent of serial work should hold you to about ninety-one times faster.</p>
+            <h3>The impossible result (1988)</h3>
+            <p>Then, in 1988, a team at Sandia National Laboratories ran three real engineering programs on a machine with 1,024 processors. One analysed stress in a beam, one simulated waves, and one modelled an unstable fluid flow. Their speed-ups were 1,021, 1,020 and 1,016 times. Those programs had a serial part of somewhere between 0.4 and 0.8 percent. Plug that into Amdahl&#x27;s Law, and you&#x27;d expect somewhere between about 110 and 200 times faster. They got more than a thousand. So was Amdahl wrong?</p>
+            <h3>Gustafson: change the question</h3>
+            <p>John Gustafson, who wrote up the result, pointed at a hidden assumption. Amdahl&#x27;s formula keeps the job the same size, and asks how fast more processors can finish it. But that&#x27;s not what people actually do with a bigger machine. Give a scientist a thousand times more computing, and they don&#x27;t run yesterday&#x27;s simulation faster. They run a bigger one: a finer grid, more time steps, more detail, in about the same amount of time. It&#x27;s like adding lanes to a motorway: more lanes won&#x27;t get one car home any faster, but they&#x27;ll move a whole city at rush hour. The serial part, things like loading the program and starting up, stays about the same. It&#x27;s the parallel part that grows with the machine. Count the speed-up that way, and it&#x27;s simply the serial part, plus the parallel part times the number of processors. Gustafson credited the formula to his Sandia colleague, Barsis, which is why it&#x27;s often called the Gustafson–Barsis law. With the Sandia jobs&#x27; serial fractions, it predicts about 1,016 to 1,020 times faster, almost exactly what they measured. Take our five percent example again: with a thousand processors and a job that grows with them, the speed-up is about 950, not 20. Here&#x27;s the kind of question that turns up in exams. Five percent serial, sixty-four processors. Ask Amdahl&#x27;s question, the same job made faster, and you get about fifteen times. Ask Gustafson&#x27;s question, a bigger job in the same time, and you get sixty point eight five times. Same program, same machine, two different answers, because they&#x27;re measuring two different things.</p>
+            <h3>Strong vs weak scaling</h3>
+            <p>So who&#x27;s right? Both of them, because they&#x27;re answering different questions. Picture a school marking exams. If you hire more teachers to mark one single paper, you hit Amdahl&#x27;s wall fast: someone still has to add up the final score. If you hire more teachers so you can mark more papers in the same afternoon, you scale like Gustafson. Loading one web page faster is an Amdahl problem. Fitting a bigger, more detailed problem into the same hour is a Gustafson problem. Engineers have names for these two ideas. Making a fixed-size job faster with more processors is called strong scaling, and Amdahl&#x27;s Law sets its limit. Growing the job along with the processors, so each one keeps the same amount of work, is called weak scaling, and that&#x27;s Gustafson&#x27;s territory. If you see those words in a course or an exam, that&#x27;s all they mean.</p>
+            <h3>2005: the clock stops</h3>
+            <p>For decades, most programs got faster for free, because each new processor simply ran at a higher clock speed. Then, around the beginning of 2003, that climb took a sharp turn and flattened, held back by heat and power. In 2004, Intel officially abandoned its plans for a four gigahertz chip. Instead, chip makers turned to multicore: more cores on each chip, rather than faster ones. As the software expert Herb Sutter put it in 2005, the free lunch was over. From then on, the big speed gains came from using many cores at once, which put Amdahl&#x27;s serial part inside every laptop and phone.</p>
+            <h3>AI and the slow part</h3>
+            <p>Which brings us to AI. Meta trained its largest Llama 3 model on up to sixteen thousand graphics processors at once. That only works because training is a Gustafson problem: bigger models and more data grow to fill the machine. But Amdahl never really goes away. Every so often, all those processors have to stop and agree on what they&#x27;ve learned, and that step is serial. Meta&#x27;s engineers wrote that even a single straggler can slow down thousands of other GPUs. One slow chip, and sixteen thousand wait for it. And over one fifty-four-day stretch of training, they counted 466 interruptions to the job. Keeping that serial part tiny, by syncing smartly, replacing failing hardware fast and restarting quickly, is a huge part of how modern AI gets built. Amdahl&#x27;s 1967 argument is still sitting in the middle of the most powerful computers on Earth.</p>
+            <h3>The challenge</h3>
+            <p>So here&#x27;s a challenge. Next time a game or a big app loads, open your task manager and find the core doing all the work while the others wait. That&#x27;s Amdahl&#x27;s serial part, live on your screen.</p>
+          </div>
+        </details>
+      </div>
+
+      <section>
+        <div class="wrap">
+          <div class="cta-band">
+            <div>
+              <h2>Another story like this</h2>
+              <p>The 1990 AT&amp;T crash: how one line of code silenced America's phones — with an interactive cascade simulator.</p>
+            </div>
+            <a class="btn btn-primary" href="/videos/att-1990-crash/">Open the story</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="/">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M44.5 21.5A17 17 0 1 0 49 33" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          <path d="M38 26 52 12M41 12h11v11" fill="none" stroke="var(--mint)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>outoflimit</span>
+      </a>
+      <p class="muted">How your tech really works, and where it breaks.</p>
+    </div>
+    <nav aria-label="Explore">
+      <h2 class="footer-h">Explore</h2>
+      <a href="/videos/">All videos</a>
+      <a href="/videos/morris-worm/#lab">Interactive lab</a>
+      <a href="/about/">About &amp; how we work</a>
+    </nav>
+    <nav aria-label="Follow">
+      <h2 class="footer-h">Follow</h2>
+      <a href="https://www.youtube.com/@outoflimit-w5o" rel="noopener" target="_blank">YouTube</a>
+      <a href="https://www.youtube.com/@outoflimit-w5o?sub_confirmation=1" rel="noopener" target="_blank">Subscribe</a>
+    </nav>
+    <nav aria-label="Legal">
+      <h2 class="footer-h">Legal</h2>
+      <a href="/legal/#privacy">Privacy</a>
+      <a href="/legal/#credits">Credits &amp; licences</a>
+      <a href="/legal/#copyright">Copyright</a>
+    </nav>
+  </div>
+  <div class="wrap footer-base">
+    <span>© <span data-year>2026</span> outoflimit. Original animations, scripts and code.</span>
+    <span class="muted">Not affiliated with any company or product named in our videos.</span>
+  </div>
+</footer>
+
+  </body>
+</html>
