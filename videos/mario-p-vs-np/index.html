@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Mario is secretly a million dollar math problem (P vs NP) — outoflimit</title>
+    <meta name="description" content="Why no one knows a fast way to tell if a Mario level can be beaten: P vs NP explained with Sudoku and a pizza order, how researchers built a 3-SAT puzzle into a Super Mario Bros. level, and why your bank login cares. Interactive pizza-puzzle lab, sources and full transcript." />
+    <link rel="canonical" href="https://www.outoflimit.com/videos/mario-p-vs-np/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#0d0e10" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:site_name" content="outoflimit" />
+    <meta property="og:title" content="Super Mario Is Secretly a Million Dollar Math Problem (P vs NP)" />
+    <meta property="og:description" content="Make every friend happy with one pizza, the same puzzle hidden inside a Super Mario Bros. level. P vs NP explained, with an interactive lab, sources and the full transcript." />
+    <meta property="og:url" content="https://www.outoflimit.com/videos/mario-p-vs-np/" />
+    <meta property="og:image" content="https://www.outoflimit.com/img/mario-p-vs-np.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="module" crossorigin src="/assets/mario-DqETNYLw.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/main-CLWJINiO.js">
+    <link rel="stylesheet" crossorigin href="/assets/main-kDqNhFGe.css">
+  </head>
+  <body data-section="videos">
+    <a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="/" aria-label="outoflimit home">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M44.5 21.5A17 17 0 1 0 49 33" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+        <path d="M38 26 52 12M41 12h11v11" fill="none" stroke="var(--mint)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>outoflimit</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="/videos/" data-nav="videos">Videos</a>
+      <a href="/videos/morris-worm/#lab" data-nav="lab">Lab</a>
+      <a href="/about/" data-nav="about">About</a>
+      <a class="btn btn-sm btn-primary" href="https://www.youtube.com/@outoflimit-w5o?sub_confirmation=1" rel="noopener" target="_blank">Subscribe</a>
+    </nav>
+  </div>
+</header>
+
+    <main id="main">
+      <div class="wrap">
+        <header class="article-head" style="max-width:900px">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="/videos/">Videos</a> / Limits</nav>
+          <h1 style="font-size:clamp(2rem,4.4vw,3.3rem)">Super Mario Is Secretly a Million Dollar Math Problem (P vs NP)</h1>
+          <div class="meta">
+            <span class="chip"><span class="dot"></span><span data-release="2026-12-03T20:30:00Z" data-before="Premieres Fri 4 Dec · 2:00 AM IST" data-after="4 Dec 2026">4 Dec 2026</span></span>
+            <span class="chip">8 min 17 s</span>
+            <span class="chip">Limits</span>
+          </div>
+        </header>
+
+        <div class="player" data-yt="VIDEO_ID" data-yt-release="2026-12-03T20:30:00Z"
+             data-soon-text="Premieres Fri 4 Dec · 2:00 AM IST — tap to subscribe and get notified"
+             data-title="Super Mario Is Secretly a Million Dollar Math Problem (P vs NP)">
+          <img src="/img/mario-p-vs-np.jpg" width="1280" height="720" alt="Video thumbnail: $1,000,000 LEVEL. A neon line-art plumber on a platform level, logic symbols in the blocks, a gold flag at the end" />
+          <button class="play" type="button" aria-label="Play the video">
+            <span class="play-inner">
+              <span class="play-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+              <span class="note">Loads YouTube's player when you press play</span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="narrow prose" style="padding-top:48px">
+        <p class="lead" style="font-size:1.2rem;color:var(--text)">One plumber, one flag, one question: can he reach it? For a big enough level, nobody knows a fast way for a computer to answer. The reason is P vs NP, the million-dollar question that the locks on your bank login quietly bet on. In 2014, four computer scientists showed how to hide that question inside a Super Mario Bros. level.</p>
+
+        <h2 id="chapters">Chapters</h2>
+        <ol class="toc" data-release="2026-12-03T20:30:00Z" data-soon-text="Chapter links open on YouTube from Fri 4 Dec, 2:00 AM IST, when the video goes live.">
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=0s" target="_blank" rel="noopener"><time>0:00</time>Can he win?</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=42s" target="_blank" rel="noopener"><time>0:42</time>Too many paths</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=81s" target="_blank" rel="noopener"><time>1:21</time>Check or find: P and NP</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=128s" target="_blank" rel="noopener"><time>2:08</time>The master puzzle (1971)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=210s" target="_blank" rel="noopener"><time>3:30</time>The machine inside Mario</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=277s" target="_blank" rel="noopener"><time>4:37</time>Build one: a pizza order becomes a level</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=390s" target="_blank" rel="noopener"><time>6:30</time>Plot twist: harder, and easier</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=427s" target="_blank" rel="noopener"><time>7:07</time>The lock on your bank login</a></li>
+          <li><a href="https://www.youtube.com/watch?v=VIDEO_ID&amp;t=458s" target="_blank" rel="noopener"><time>7:38</time>The question for you</a></li>
+        </ol>
+
+        <h2>The story in 60 seconds</h2>
+        <figure class="figure">
+          <img src="/img/mnp-paths.jpg" width="1280" height="720" alt="A neon plumber on a platform level; from him a tree of paths splits again and again into a dense fan, with a counter reading 10 to the 30" loading="lazy" />
+          <figcaption>Every jump-or-don't doubles the paths to check. Eighty choices deep, that's 2<sup>80</sup>, about 10<sup>24</sup> endings.</figcaption>
+        </figure>
+        <p>A computer can always answer "can this level be beaten?" by trying every path. The trouble is how fast the paths multiply. So the real question is whether there's a <strong>shortcut</strong>.</p>
+        <figure class="figure">
+          <img src="/img/mnp-check-find.jpg" width="1280" height="720" alt="Two Sudoku grids under stopwatches: a filled one with a green check mark, and a mostly blank one" loading="lazy" />
+          <figcaption>Checking a filled Sudoku takes seconds. Filling a blank one can take hours.</figcaption>
+        </figure>
+        <p>Computer scientists sort problems exactly like that. Problems a computer can <strong>solve</strong> quickly are in <strong>P</strong>. Problems where a proposed answer can be <strong>checked</strong> quickly are in <strong>NP</strong>. Everything in P is in NP. The open question, one of the Clay Mathematics Institute's seven Millennium Prize Problems with a million dollars attached, is the reverse: if an answer is quick to check, is it always quick to find? Most experts think not. Nobody has proved it.</p>
+        <p>In 1971 Stephen Cook, in Toronto, showed that one puzzle, Boolean satisfiability (SAT), is a "master puzzle": every NP problem can be translated into it. Leonid Levin found the same idea independently in the Soviet Union. In 1972 Richard Karp showed that 21 well-known problems are all that hard. They got the name <strong>NP-complete</strong>. The best-known form of the master puzzle, <strong>3-SAT</strong>, is a pizza order: each friend states three wishes and is happy if at least one comes true. Can one pizza make everyone happy?</p>
+        <figure class="figure">
+          <img src="/img/mnp-star-room.jpg" width="1280" height="720" alt="A room with three doors in its floor and a block in its ceiling; a star bounces inside, and the plumber stands below" loading="lazy" />
+          <figcaption>The clause gadget: if the plumber came through any of the room's doors, he hit the block and a star is waiting there.</figcaption>
+        </figure>
+        <p>Greg Aloupis, Erik Demaine, Alan Guo and Giovanni Viglietta built that puzzle out of Super Mario Bros. pieces. A <strong>power-up</strong> at the start makes Mario big, and only big Mario can break the bricks before the flag. Each topping becomes a <strong>one-way drop</strong>: fall down the left passage (yes) or the right one (no), and you can't jump back up. Each friend becomes a <strong>room</strong> where a star is freed when Mario passes through. The last corridor is lined with <strong>fire bars</strong>, and Mario only survives it if a star is waiting in every room. A <strong>crossover</strong> lets two paths cross without mixing.</p>
+        <figure class="figure">
+          <img src="/img/mnp-build-one.jpg" width="1280" height="720" alt="The worked example: three choice gadgets labelled mushrooms: yes, olives: no, pineapple: yes, wired to three rooms labelled mushrooms, no olives and pineapple, above the fire-bar corridor; the plumber has reached the flag" loading="lazy" />
+          <figcaption>The video's worked example. The route Mario takes to the flag spells out the answer: mushrooms and pineapple, no olives.</figcaption>
+        </figure>
+        <p>So the flag can be reached exactly when the puzzle has an answer, and Mario's route <em>is</em> the answer. A fast way to decide "can Mario win?" would be a fast way to solve every NP problem. That's what <strong>NP-hard</strong> means here: not hard to play, hard to predict.</p>
+      </div>
+
+      <section id="lab" style="padding-top:56px">
+        <div class="wrap">
+          <div class="section-head" style="max-width:760px">
+            <span class="eyebrow">Interactive lab</span>
+            <h2>The pizza puzzle</h2>
+            <p>Flip the toppings. A friend lights up when at least one of their three wishes comes true. Make everyone happy, and in the Mario level every room has a star and the plumber reaches the flag.</p>
+          </div>
+          <div class="lab" data-lab="pizza">
+            <div class="lab-top">
+              <span class="lab-title">3-SAT, by hand</span>
+              <div class="seg" role="group" aria-label="Puzzle">
+                <button type="button" data-puzzle="video" aria-pressed="true">The video's puzzle</button>
+                <button type="button" data-puzzle="hard" aria-pressed="false">Harder: 5 toppings, 10 friends</button>
+              </div>
+            </div>
+            <div class="pizza-stage">
+              <div class="toppings" data-out="toppings" role="group" aria-label="Toppings: press to switch between yes and no"></div>
+              <div class="friends" data-out="friends"></div>
+              <p class="pizza-status" data-out="status" aria-live="polite"></p>
+            </div>
+            <div class="lab-controls">
+              <div>
+                <span class="lab-label">This puzzle</span>
+                <div class="stats">
+                  <div class="stat"><b data-out="happy" class="small">2 of 3</b><span>friends happy</span></div>
+                  <div class="stat"><b data-out="choices" class="small">8</b><span>possible choices</span></div>
+                  <div class="stat"><b data-out="tries" class="small">0</b><span>your tries</span></div>
+                </div>
+                <div class="lab-actions" style="margin-top:12px">
+                  <div class="seg"><button type="button" data-action="try-all">Try every choice</button></div>
+                </div>
+              </div>
+              <div>
+                <label class="lab-label" for="pz-n">Now scale it up: <b data-out="n">40</b> toppings</label>
+                <input id="pz-n" class="range" type="range" min="3" max="200" step="1" value="40" data-input="toppings" />
+                <div class="stats" style="grid-template-columns:1fr 1fr;margin-top:12px">
+                  <div class="stat"><b data-out="n-choices" class="small">1.10 × 10¹²</b><span>choices to try</span></div>
+                  <div class="stat"><b data-out="n-time" class="small">18 minutes</b><span>at a billion tries a second</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="muted" style="font-size:0.88rem;margin-top:12px;max-width:760px">Small puzzles are easy: the video's has 5 answers among its 8 choices (no toppings at all is one of them). The harder one has exactly one answer among 32. "Try every choice" counts through them in order, the slow way. Nobody knows a method that stays fast as the toppings grow, and that is the P vs NP question. The lab is tested: the video's two tries, the single answer of the harder puzzle, and every number shown.</p>
+        </div>
+      </section>
+
+      <div class="narrow prose">
+        <h2>Harder, and easier, than we thought</h2>
+        <figure class="figure">
+          <img src="/img/mnp-np-hard.jpg" width="1280" height="720" alt="An NP-HARD stamp over a dimmed level machine, with the words hard to predict, not hard to play" loading="lazy" />
+          <figcaption>NP-hard: a fast "can Mario win?" would be a fast answer to every NP problem.</figcaption>
+        </figure>
+        <p>In 2016, Erik Demaine, Giovanni Viglietta and Aaron Williams went further: with cleverer gadgets, deciding a generalized Super Mario Bros. level is <strong>PSPACE-complete</strong>, a class believed to be even harder than NP. Their gadgets also survive the game's known glitches. But there's a catch, and it's in the same paper: the proofs need levels of any size and either an arbitrarily large screen or a game that remembers every enemy off screen. The real games forget what's off screen. With a fixed screen and few sprites, the problem becomes solvable in polynomial time again. So no level you've played is secretly a million-dollar puzzle. The hardness is in what the rules <em>could</em> build.</p>
+
+        <h2>Why your bank login cares</h2>
+        <figure class="figure">
+          <img src="/img/mnp-lock.jpg" width="1280" height="720" alt="A red cracked padlock under the words P = NP, wired to a bank card, a chat bubble and a browser window, all red" loading="lazy" />
+          <figcaption>If P = NP with a practical method, the kind of lock behind banking, messaging and the padlock in your browser would stop working.</figcaption>
+        </figure>
+        <p>Public-key encryption relies on problems that are easy to check but believed hard to solve. As the computer scientist Lance Fortnow points out, a proof that P = NP with a practical algorithm would make public-key cryptography impossible. The same discovery would also make countless planning and design problems easy. Either way, it's not just a math prize.</p>
+
+        <h2 id="explore">Explore further</h2>
+        <ul class="sources">
+          <li><strong>Play the gadgets.</strong> The 2016 paper's authors published modified Super Mario Bros. levels that implement their gadgets; they're linked from Erik Demaine's page below.</li>
+          <li><strong>Read the paper behind the video.</strong> "Classic Nintendo Games are (Computationally) Hard" covers Mario, Donkey Kong, Zelda, Metroid and Pokémon with the same 3-SAT framework.</li>
+          <li><strong>A question to chase:</strong> if someone proved P = NP tomorrow, should they publish it, or keep it secret?</li>
+        </ul>
+
+        <h2 id="sources">Sources</h2>
+        <ol class="sources">
+          <li><a href="https://arxiv.org/abs/1203.1895" rel="noopener" target="_blank">Aloupis, Demaine, Guo, Viglietta, "Classic Nintendo Games are (Computationally) Hard", FUN 2014; Theoretical Computer Science 586 (2015) 135–160</a><span class="why">Super Mario Bros. is NP-hard (Theorem 3.1); the 3-SAT framework; the start, variable, clause, check-path and crossover gadgets; the generalization to any level size.</span></li>
+          <li><a href="https://erikdemaine.org/papers/Mario_FUN2016/" rel="noopener" target="_blank">Demaine, Viglietta, Williams, "Super Mario Bros. is Harder/Easier Than We Thought", FUN 2016</a><span class="why">PSPACE-completeness; the conditions (large screens or remembered off-screen sprites); polynomial time for the real-game model; glitch resilience; the gadget levels.</span></li>
+          <li><a href="https://news.mit.edu/2016/mario-brothers-hard-complexity-class-pspace-0601" rel="noopener" target="_blank">MIT News (Larry Hardesty), on the Super Mario Bros. PSPACE result, 1 June 2016</a><span class="why">What the 2016 result does and doesn't say about real levels.</span></li>
+          <li><a href="https://amturing.acm.org/award_winners/cook_n991950.cfm" rel="noopener" target="_blank">ACM Turing Award: Stephen Cook</a><span class="why">Cook's 1971 paper "The Complexity of Theorem-Proving Procedures" and SAT as the first NP-complete problem.</span></li>
+          <li><a href="https://www.mathnet.ru/eng/ppi914" rel="noopener" target="_blank">L. Levin, "Universal Sequential Search Problems", Problemy Peredachi Informatsii 9(3), 1973</a><span class="why">The same idea, found independently.</span></li>
+          <li><a href="https://en.wikipedia.org/wiki/Karp%27s_21_NP-complete_problems" rel="noopener" target="_blank">Karp's 21 NP-complete problems (summary of R. Karp, "Reducibility Among Combinatorial Problems", 1972)</a><span class="why">The 21 problems shown to be NP-complete.</span></li>
+          <li><a href="https://www.claymath.org/millennium-problems" rel="noopener" target="_blank">Clay Mathematics Institute, Millennium Prize Problems</a><span class="why">P vs NP and the one-million-dollar prize.</span></li>
+          <li><a href="https://courses.cs.duke.edu/fall20/compsci590.7/CACM-Fortnow.pdf" rel="noopener" target="_blank">L. Fortnow, "The Status of the P versus NP Problem", Communications of the ACM 52(9), 2009</a><span class="why">What P = NP would mean, including for public-key cryptography; most experts expect P ≠ NP.</span></li>
+        </ol>
+
+        <h2 id="transcript">Transcript</h2>
+        <details class="transcript">
+          <summary>Read the full narration</summary>
+          <div class="inner">
+            <h3>Can he win?</h3>
+            <p>Here&#x27;s a simple level. One plumber. One flag. One question: can he reach it? Easy, right? Now make the level bigger. Every jump doubles the paths to check. Build it big enough, and nobody knows a fast way for a computer to answer that question. And here&#x27;s the strange part. The reason is the same unsolved puzzle that the locks on your bank login quietly bet on. It&#x27;s called P versus NP. It&#x27;s over fifty years old, and there&#x27;s a million dollars for whoever solves it. In twenty fourteen, a team of computer scientists proved that Super Mario Bros. is secretly one of these puzzles. By the end of this video, you&#x27;ll know how to build a Mario level that&#x27;s really a logic problem in disguise.</p>
+            <h3>Too many paths</h3>
+            <p>Every level Nintendo shipped can be beaten. Designers made sure of it. But imagine any level you could build from the game&#x27;s pieces: blocks, power-ups, fire bars. Of any size. Can a computer look at it and say &quot;yes, beatable&quot; or &quot;no, impossible&quot;? Sure. Try every path. Jump here, wait there, run past the enemy. But that&#x27;s like a choose-your-own-adventure book where every page offers two choices. Eighty choices deep, and the book has more endings than there are grains of sand on Earth. Checking every ending one by one is hopeless. The real question is: is there a shortcut?</p>
+            <h3>Check or find: P and NP</h3>
+            <p>Here&#x27;s a filled-in Sudoku. Is it correct? You scan the rows, the columns, the boxes. Seconds. Here&#x27;s a blank one. Solve it. Now you&#x27;re guessing, backtracking, erasing. Minutes, sometimes hours. Computer scientists sort problems exactly like this. If a computer can solve a problem quickly, it&#x27;s in a group called P. If a computer can check an answer quickly, it&#x27;s in a group called NP. Every quick-to-solve problem is also quick to check. The million-dollar question is the other way round: if you can check an answer fast, can you always find it fast too? Hold on to that, because your bank cares a lot about the answer. Almost every expert thinks the answer is no. But nobody has proved it.</p>
+            <h3>The master puzzle</h3>
+            <p>The story starts in nineteen seventy-one, with a mathematician in Toronto named Stephen Cook. Cook found something astonishing: one puzzle that every NP problem can be translated into. Solve that one puzzle fast, and you solve all of them fast. Across the Iron Curtain, Leonid Levin in the Soviet Union found the same idea on his own. A year later, Richard Karp showed that twenty-one famous problems, from scheduling to route planning, were all the same puzzle in disguise. These &quot;hardest&quot; problems got a name: NP complete. Its most famous form is called three-SAT. Let&#x27;s play it. Three friends are ordering one pizza. Each friend has a rule with three wishes, and they&#x27;re happy if at least one wish comes true. Friend one: &quot;mushrooms, or olives, or no pineapple.&quot; Friend two: &quot;olives, or peppers, or no mushrooms.&quot; And so on. Can you choose toppings that make every friend happy at the same time? Check a choice: easy. Find one, with hundreds of toppings and thousands of friends: that&#x27;s where it gets brutal. And here&#x27;s the trick researchers use. To prove a new problem is just as hard, you show that any three-SAT puzzle can be rebuilt inside it. In twenty fourteen, Greg Aloupis, Erik Demaine, Alan Guo and Giovanni Viglietta did that with Super Mario Bros.</p>
+            <h3>The machine inside Mario</h3>
+            <p>Their idea: turn the level into a machine. Paths become wires, and little rooms become logic. It starts with a power-up. Mario grows big, and he&#x27;ll need to stay big to break the bricks in front of the flag at the very end. Next, a choice. Mario drops down the left passage or the right one. The ledge is too high to jump back up. Left means &quot;mushrooms: yes&quot;. Right means &quot;mushrooms: no&quot;. One drop, and the decision is locked forever. Every friend gets a little room, and each passage leads past the rooms of the friends it makes happy. When Mario passes through, he hits a block and frees a star, and the star stays bouncing there. A room gets a star only if Mario came through one of its three doors: that friend got at least one wish. At the end, there&#x27;s one last corridor full of fire bars. It passes by every room. Mario only survives if a star is waiting in every room, because each star makes him invincible for the next stretch. Miss one friend, and he burns. There&#x27;s even a bridge piece, so two wires can cross without mixing up.</p>
+            <h3>Build one: a pizza order becomes a level</h3>
+            <p>Let&#x27;s build one together. A smaller pizza: three toppings, three friends. Friend one wants mushrooms, or olives, or no pineapple. Friend two wants no mushrooms, or no olives, or pineapple. Friend three wants no mushrooms, or olives, or pineapple. Step one: every topping becomes a choice. Three drops in a row: mushrooms, olives, pineapple. Step two: every friend becomes a room, waiting for a star. Step three: wire them up. The &quot;mushrooms: yes&quot; passage runs past friend one&#x27;s room, because mushrooms make friend one happy. The &quot;mushrooms: no&quot; passage runs past friends two and three. Every wish gets its own wire. Now let&#x27;s play. Mushrooms yes, olives no, pineapple no. Friend one gets a star. Friend two gets a star. But friend three&#x27;s room stays empty. In the fire bar corridor, that empty room is fatal. This choice fails. Try again. Mushrooms yes, olives no, pineapple yes. Now every room has a star. Mario runs the whole corridor, breaks the bricks, and reaches the flag. And look at the route he took. It spells out the answer: mushrooms and pineapple, no olives. Every friend is happy. Finding that route was easy here. With a thousand toppings, nobody knows a fast way. Put it together, and any three-SAT puzzle becomes one giant Mario level. If the flag can be reached, the puzzle has a solution, and Mario&#x27;s route is the answer. If it can&#x27;t, there&#x27;s no solution. So a fast way to decide &quot;can Mario win?&quot; would be a fast way to solve every NP problem. That&#x27;s what &quot;Mario is NP hard&quot; means. Not that the game is hard to play. That it&#x27;s hard to predict.</p>
+            <h3>Plot twist: harder, and easier</h3>
+            <p>Two years later, Demaine, Viglietta and Aaron Williams went further. With cleverer gadgets, they showed generalized Mario is even harder: PSPACE complete. Think of it as problems where even checking an answer could take an astronomically long time. But there&#x27;s a catch. These proofs need gigantic levels, and either a gigantic screen or a game that remembers every enemy off screen. The real game forgets what&#x27;s off screen. With that limit, the same paper shows the problem becomes easy again. So no level you&#x27;ve played is secretly a million-dollar puzzle. The hardness hides in what the rules could build.</p>
+            <h3>The lock on your bank login</h3>
+            <p>Remember the lock on your bank login? Online banking, messaging, and the padlock in your browser all rely on puzzles that are easy to check but believed hard to solve. If someone proved P equals NP with a practical method, the computer scientist Lance Fortnow points out, that whole kind of lock would stop working. But the same discovery would let us plan perfect delivery routes and solve countless design problems overnight. So it&#x27;s not just a math prize. It&#x27;s a bet the whole internet makes every day.</p>
+            <h3>The question for you</h3>
+            <p>A cheerful plumber, a pizza order, and the locks on your bank all share one unanswered question. If you want to go further, look up Cook&#x27;s nineteen seventy-one paper, Karp&#x27;s twenty-one problems, and &quot;Classic Nintendo Games are Computationally Hard&quot;. The authors even published their gadget levels. So here&#x27;s my question for you: if someone proved P equals NP tomorrow, should they publish it, or keep it secret? Tell me in the comments. Subscribe to outoflimit for more.</p>
+          </div>
+        </details>
+      </div>
+
+      <section>
+        <div class="wrap">
+          <div class="cta-band">
+            <div>
+              <h2>Another story like this</h2>
+              <p>Amdahl's Law: why a million CPUs can still be only 20x faster — with an interactive speed-up calculator.</p>
+            </div>
+            <a class="btn btn-primary" href="/videos/amdahl-gustafson/">Open the story</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="/">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M44.5 21.5A17 17 0 1 0 49 33" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          <path d="M38 26 52 12M41 12h11v11" fill="none" stroke="var(--mint)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>outoflimit</span>
+      </a>
+      <p class="muted">How your tech really works, and where it breaks.</p>
+    </div>
+    <nav aria-label="Explore">
+      <h2 class="footer-h">Explore</h2>
+      <a href="/videos/">All videos</a>
+      <a href="/videos/morris-worm/#lab">Interactive lab</a>
+      <a href="/about/">About &amp; how we work</a>
+    </nav>
+    <nav aria-label="Follow">
+      <h2 class="footer-h">Follow</h2>
+      <a href="https://www.youtube.com/@outoflimit-w5o" rel="noopener" target="_blank">YouTube</a>
+      <a href="https://www.youtube.com/@outoflimit-w5o?sub_confirmation=1" rel="noopener" target="_blank">Subscribe</a>
+    </nav>
+    <nav aria-label="Legal">
+      <h2 class="footer-h">Legal</h2>
+      <a href="/legal/#privacy">Privacy</a>
+      <a href="/legal/#credits">Credits &amp; licences</a>
+      <a href="/legal/#copyright">Copyright</a>
+    </nav>
+  </div>
+  <div class="wrap footer-base">
+    <span>© <span data-year>2026</span> outoflimit. Original animations, scripts and code.</span>
+    <span class="muted">Not affiliated with any company or product named in our videos.</span>
+  </div>
+</footer>
+
+  </body>
+</html>
